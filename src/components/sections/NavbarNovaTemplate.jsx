@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import SectionAria from '../../components/sectionElements/SectionArea'
 import SectionWrapper from '../../components/sectionElements/SectionWrapper'
 import content from '../../content/content'
-
+import { Link } from 'react-scroll'
 import ButtonReflexo from '../interactives/ButtonReflexo'
 import { useContext } from 'react'
 
@@ -71,17 +71,25 @@ function NavbarNovaTemplate({
           <div
             className={`flex flex-col z-20 relative  ${
               isScrolled
-                ? 'w-[20%] tablet1:w-[20%] tablet2:w-[15%] desktop1:w-[15%] desktop2:w-[10%] desktop3:w-[10%] transition-all duration-700'
-                : 'w-[30%] phone2:w-[30%] phone3:w-[35%] tablet1:w-[30%] tablet2:w-[20%] desktop1:w-[15%] desktop3:w-[15%] transition-all duration-700'
+                ? 'w-[20%] tablet1:w-[20%] tablet2:w-[25%] desktop1:w-[15%] desktop2:w-[15%] desktop3:w-[25%] transition-all duration-700'
+                : 'w-[30%] phone2:w-[30%] phone3:w-[35%] tablet1:w-[30%] tablet2:w-[30%] desktop1:w-[25%] desktop3:w-[30%] transition-all duration-700'
             }`}
           >
             {' '}
             <img
               src={content.texts.navbar.logo.img}
               alt={content.texts.navbar.logo.alt}
-              className="w-[100%]"
-              width={160}
-              height={102}
+              className="w-[100%] desktop1:hidden"
+              width={195}
+              height={35}
+              fetchPriority="high"
+            />
+            <img
+              src={content.texts.navbar.logo.imgDesktop}
+              alt={content.texts.navbar.logo.alt}
+              className="w-[100%] hidden desktop1:flex"
+              width={230}
+              height={41}
               fetchPriority="high"
             />
           </div>
@@ -92,30 +100,33 @@ function NavbarNovaTemplate({
               const id = ids[index]
 
               return (
-                <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    aria-label={`Link para ${item}`}
-                    title={item}
-                    data-track={id}
-                    className={`cursor-pointer ${hoverLinks} bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity} font-secondFont`}
-                    onClick={(e) => {
-                      e.preventDefault()
-                      const el = document.getElementById(id)
-                      if (el) {
-                        const yOffset = -90
-                        const y =
-                          el.getBoundingClientRect().top +
-                          window.scrollY +
-                          yOffset
+                <ul>
+                  {' '}
+                  <li key={id}>
+                    <a
+                      href={`#${id}`}
+                      aria-label={`Link para ${item}`}
+                      title={item}
+                      data-track={id}
+                      className={`cursor-pointer ${hoverLinks} bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity} font-secondFont`}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        const el = document.getElementById(id)
+                        if (el) {
+                          const yOffset = -90
+                          const y =
+                            el.getBoundingClientRect().top +
+                            window.scrollY +
+                            yOffset
 
-                        window.scrollTo({ top: y, behavior: 'smooth' })
-                      }
-                    }}
-                  >
-                    {item}
-                  </a>
-                </li>
+                          window.scrollTo({ top: y, behavior: 'smooth' })
+                        }
+                      }}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                </ul>
               )
             })}
             <ButtonReflexo
@@ -172,30 +183,33 @@ function NavbarNovaTemplate({
                     const id = ids[index]
 
                     return (
-                      <li key={id}>
-                        <a
-                          href={`#${id}`}
-                          aria-label={`Link para ${item}`}
-                          title={item}
-                          data-track={id}
-                          className={`cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity}`}
-                          onClick={(e) => {
-                            e.preventDefault()
-                            const el = document.getElementById(id)
-                            if (el) {
-                              const yOffset = -90
-                              const y =
-                                el.getBoundingClientRect().top +
-                                window.scrollY +
-                                yOffset
+                      <ul>
+                        {' '}
+                        <li key={id}>
+                          <a
+                            href={`#${id}`}
+                            aria-label={`Link para ${item}`}
+                            title={item}
+                            data-track={id}
+                            className={`cursor-pointer bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat bg-left-bottom transition-[background-size] duration-300 hover:bg-[length:100%_2px] ${textOpacity}`}
+                            onClick={(e) => {
+                              e.preventDefault()
+                              const el = document.getElementById(id)
+                              if (el) {
+                                const yOffset = -90
+                                const y =
+                                  el.getBoundingClientRect().top +
+                                  window.scrollY +
+                                  yOffset
 
-                              window.scrollTo({ top: y, behavior: 'smooth' })
-                            }
-                          }}
-                        >
-                          {item}
-                        </a>
-                      </li>
+                                window.scrollTo({ top: y, behavior: 'smooth' })
+                              }
+                            }}
+                          >
+                            {item}
+                          </a>
+                        </li>
+                      </ul>
                     )
                   })}
                   <ButtonReflexo
