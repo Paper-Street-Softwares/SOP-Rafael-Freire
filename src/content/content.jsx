@@ -317,9 +317,9 @@ const content = {
           title: (
             <p>
               Direito da Pessoa com Deficiência <br />
-              (Ênfase em Transtorno do Espectro Autista - TEA)
             </p>
           ),
+          obs: '(Ênfase em Transtorno do Espectro Autista - TEA)',
           subtitle: 'Garantia de direitos e inclusão para pessoas com TEA.',
           description: (
             <div>

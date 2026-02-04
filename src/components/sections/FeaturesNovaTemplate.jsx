@@ -222,6 +222,9 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque }) {
                           className={`font-secondFont font-bold text-lg mb-2 ${text} ${hoverTextCard} transition-all`}
                         >
                           {feature.title}
+                          <p className="leading-4 font-medium text-paragraph2">
+                            {feature.obs}
+                          </p>
                         </h1>
                         <p
                           className={`text-sm font-secondFont font-light ${textOpacity} ${hoverTextCard} transition-all`}
