@@ -11,6 +11,8 @@ import teamMemberImg3 from '../assets/imgs/team/team2.webp'
 import team1 from '../assets/imgs/team/team1.webp'
 import team2 from '../assets/imgs/team/team2.webp'
 import team3 from '../assets/imgs/team/team3.webp'
+import team4 from '../assets/imgs/team/team4.webp'
+import team5 from '../assets/imgs/team/team5.webp'
 
 import imgFeatures from '../assets/imgs/features/imgServices.webp'
 
@@ -496,6 +498,36 @@ const content = {
               na estratégia processual e na condução responsável das demandas,
               prezando por soluções seguras, éticas e eficazes para seus
               clientes.
+            </p>
+          ),
+        },
+        card4: {
+          img: team4,
+          alt: 'Imagens ilustrativa dos profissionais',
+          title: 'Bel. em Direito',
+          name: 'Maiko Paim de Castro',
+          description: (
+            <p>
+              Bacharel em Direito pela Universidade do Oeste Paulista (UNOESTE),
+              desde 2005, e atua como estagiário na área de marketing do
+              escritório, colaborando no desenvolvimento de estratégias de
+              comunicação institucional, sempre com responsabilidade, ética e
+              alinhamento aos valores da advocacia.
+            </p>
+          ),
+        },
+        card5: {
+          img: team5,
+          alt: 'Imagens ilustrativa dos profissionais',
+          title: 'Estagiária',
+          name: 'Julia Carla Almeida Silva',
+          description: (
+            <p>
+              Estagiária de Direito no escritório, cursando graduação pela FAPE
+              – Faculdade de Presidente Epitácio, com início em 2023. Atua no
+              apoio às atividades jurídicas, contribuindo para a organização
+              processual e o acompanhamento das demandas, sempre com
+              comprometimento, responsabilidade e ética profissional.
             </p>
           ),
         },

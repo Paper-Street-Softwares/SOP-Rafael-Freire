@@ -211,7 +211,7 @@ function TeamSectionNew({ colorMode }) {
           }}
         >
           {activeCard && (
-            <div className="px-4 pb-4 space-y-4">
+            <div className="px-4 ">
               <p className={`text-black`}>{modalContent[activeCard].text}</p>
 
               {/* <ButtonReflexo

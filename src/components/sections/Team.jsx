@@ -65,7 +65,7 @@ export default function Team({ colorMode }) {
           '641px': '85vw',
         }}
       >
-        <div className="text-paragraph3 px-4 pb-4">
+        <div className="text-paragraph3 px-4 ">
           <p className="mt-[15px] mb-[20px] text-black/80">{modalContent}</p>
         </div>
       </Dialog>
