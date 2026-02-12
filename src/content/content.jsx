@@ -89,10 +89,10 @@ export const infos = {
   ),
   obs: <span className="italic">A_Definir </span>,
   instagramProfile: 'danipaimadvocacia', // Sem o @
-  facebookProfile: '',
+  facebookProfile: '61587681621659',
   linkeDinProfile: '',
   x: '',
-  tiktokProfile: '',
+  tiktokProfile: 'escritoriodanipaim',
 
   whatsappDefaultMessage:
     'Olá! Vim através do site de vocês e gostaria de tirar umas dúvidas.',

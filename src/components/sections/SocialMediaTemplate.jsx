@@ -2,7 +2,7 @@ import React from 'react'
 import SectionArea from '../sectionElements/SectionArea'
 import SectionWrapper from '../sectionElements/SectionWrapper'
 import content from '../../content/content'
-import { Instagram, ArrowRight } from 'lucide-react'
+import { Instagram, ArrowRight, Facebook } from 'lucide-react'
 import iconTikTok from '../../assets/imgs/icons/tiktok.png'
 import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
 
@@ -123,7 +123,38 @@ function SocialMediaTemplate({ colorMode }) {
                   </a>
                 )}
 
-                {/* {content.texts.links.tiktok?.trim() && (
+                {content.texts.links.facebook?.trim() && (
+                  <a
+                    href={content.texts.links.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Link para facebook"
+                    className={`group flex items-center gap-6 p-6 rounded-2xl border ${borderCard} hover:border-primary/30 hover:shadow-lg transition-all ${cardBg}`}
+                  >
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-blue-600 to-blue-500 text-white flex items-center justify-center shrink-0">
+                      <Facebook className="w-7 h-7" />
+                    </div>
+
+                    <div>
+                      <h1
+                        className={`font-bold font-secondFont text-lg ${text}`}
+                      >
+                        facebook
+                      </h1>
+                      <p
+                        className={`font-secondFont font-light text-sm ${textOpacity}`}
+                      >
+                        Dicas diárias e bastidores
+                      </p>
+                    </div>
+
+                    <ArrowRight
+                      className={`ml-auto w-5 h-5 transition-colors ${arrowColor}`}
+                    />
+                  </a>
+                )}
+
+                {content.texts.links.tiktok?.trim() && (
                   <a
                     href={content.texts.links.tiktok}
                     target="_blank"
@@ -131,7 +162,7 @@ function SocialMediaTemplate({ colorMode }) {
                     aria-label="Link para TikTok"
                     className={`group flex items-center gap-6 p-6 rounded-2xl border ${borderCard} hover:border-primary/30 hover:shadow-lg transition-all ${cardBg}`}
                   >
-                    <div className="w-14 h-14 rounded-full bg-blue-700 text-white flex items-center justify-center shrink-0">
+                    <div className="w-14 h-14 rounded-full bg-black-700 text-white flex items-center justify-center shrink-0">
                       <img src={iconTikTok} className="invert w-8" alt="" />
                     </div>
 
@@ -142,7 +173,7 @@ function SocialMediaTemplate({ colorMode }) {
                       <p
                         className={`font-secondFont font-light text-sm ${textOpacity}`}
                       >
-                        Conteúdo corporativo
+                        Dicas diárias e bastidores
                       </p>
                     </div>
 
@@ -150,7 +181,7 @@ function SocialMediaTemplate({ colorMode }) {
                       className={`ml-auto w-5 h-5 transition-colors ${arrowColor}`}
                     />
                   </a>
-                )} */}
+                )}
               </div>
             </div>
           </div>
